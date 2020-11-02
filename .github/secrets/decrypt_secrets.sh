@@ -9,11 +9,11 @@ mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 cp ./.github/secrets/Execushield_dev_profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/Execushield_dev_profile.mobileprovision
 
 
-security create-keychain -p "" build.keychain
-security import ./.github/secrets/ES_ios_Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "" -A
+security create-keychain -p "1010" build.keychain
+security import ./.github/secrets/ES_ios_Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "1010" -A
 
 security list-keychains -s ~/Library/Keychains/build.keychain
 security default-keychain -s ~/Library/Keychains/build.keychain
-security unlock-keychain -p "" ~/Library/Keychains/build.keychain
+security unlock-keychain -p "1010" ~/Library/Keychains/build.keychain
 
 security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
