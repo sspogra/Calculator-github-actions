@@ -10,7 +10,7 @@ cp ./.github/secrets/Execushield_dev_profile.mobileprovision ~/Library/MobileDev
 
 
 security create-keychain -p "" build.keychain
-security import ./.github/secrets/ES_ios_Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "" -A
+security import ./.github/secrets/ES_ios_Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "1010" -A
 
 security list-keychains -s ~/Library/Keychains/build.keychain
 security default-keychain -s ~/Library/Keychains/build.keychain
